@@ -1,0 +1,53 @@
+  0.50s  [ESP32 Serial]  
+  0.50s  [ESP32 Serial]  Bai 4 - HTTP web server dieu khien LED
+  0.50s  [ESP32 Serial]          [mo phong] pinMode(2, OUTPUT)
+  0.50s  [ESP32 Serial]          [mo phong] digitalWrite(GPIO2, LOW)
+  0.50s  [ESP32 Serial]  LED GPIO2: TAT (LOW)
+  0.50s  [ESP32 Serial]  Dang ket noi Wi-Fi: CMCC-C2eF
+  0.50s  [ESP32 Serial]           WiFi.begin("CMCC-C2eF")
+  0.50s  [ESP32 Serial]  
+  0.50s  [ESP32 Serial]  Da vao mang, IP cua ESP32: 127.0.0.1
+  0.50s  [ESP32 Serial]  Mo trinh duyet (cung mang): http://127.0.0.1/
+  1.00s  [trinh duyet]   $ curl -s -i http://127.0.0.1/
+  1.01s  [ESP32 Serial]  127.0.0.1 -> GET /
+  1.01s  [trinh duyet]     HTTP/1.1 200 OK
+  1.01s  [trinh duyet]     Content-Type: text/html; charset=utf-8
+  1.01s  [trinh duyet]     noi dung: Trạng thái: <b>đang TẮT</b>
+  1.41s  [trinh duyet]   $ curl -s -i http://127.0.0.1/on
+  1.42s  [ESP32 Serial]  127.0.0.1 -> GET /on
+  1.42s  [ESP32 Serial]          [mo phong] digitalWrite(GPIO2, HIGH)
+  1.42s  [ESP32 Serial]  LED GPIO2: BAT (HIGH)
+  1.42s  [trinh duyet]     HTTP/1.1 303 See Other
+  1.42s  [trinh duyet]     Content-Type: text/html
+  1.42s  [trinh duyet]     Location: /
+  1.82s  [trinh duyet]   $ curl -s -i http://127.0.0.1/
+  1.83s  [ESP32 Serial]  127.0.0.1 -> GET /
+  1.83s  [trinh duyet]     HTTP/1.1 200 OK
+  1.83s  [trinh duyet]     Content-Type: text/html; charset=utf-8
+  1.83s  [trinh duyet]     noi dung: Trạng thái: <b>đang BẬT</b>
+  2.23s  [trinh duyet]   $ curl -s -i http://127.0.0.1/off
+  2.24s  [ESP32 Serial]  127.0.0.1 -> GET /off
+  2.24s  [ESP32 Serial]          [mo phong] digitalWrite(GPIO2, LOW)
+  2.24s  [ESP32 Serial]  LED GPIO2: TAT (LOW)
+  2.24s  [trinh duyet]     HTTP/1.1 303 See Other
+  2.24s  [trinh duyet]     Content-Type: text/html
+  2.24s  [trinh duyet]     Location: /
+  2.64s  [trinh duyet]   $ curl -s -i http://127.0.0.1/
+  2.65s  [ESP32 Serial]  127.0.0.1 -> GET /
+  2.65s  [trinh duyet]     HTTP/1.1 200 OK
+  2.65s  [trinh duyet]     Content-Type: text/html; charset=utf-8
+  2.65s  [trinh duyet]     noi dung: Trạng thái: <b>đang TẮT</b>
+  3.05s  [trinh duyet]   $ curl -s -i -L http://127.0.0.1/on
+  3.06s  [ESP32 Serial]  127.0.0.1 -> GET /on
+  3.06s  [ESP32 Serial]          [mo phong] digitalWrite(GPIO2, HIGH)
+  3.06s  [ESP32 Serial]  LED GPIO2: BAT (HIGH)
+  3.06s  [ESP32 Serial]  127.0.0.1 -> GET /
+  3.07s  [trinh duyet]     HTTP/1.1 303 See Other
+  3.07s  [trinh duyet]     Content-Type: text/html
+  3.07s  [trinh duyet]     Location: /
+  3.07s  [trinh duyet]     noi dung: Trạng thái: <b>đang BẬT</b>
+  3.47s  [trinh duyet]   $ curl -s -i http://127.0.0.1/abc
+  3.47s  [ESP32 Serial]  127.0.0.1 -> GET /abc
+  3.48s  [trinh duyet]     HTTP/1.1 404 Not Found
+  3.48s  [trinh duyet]     Content-Type: text/plain
+  3.48s  [trinh duyet]     noi dung: Khong co trang nay

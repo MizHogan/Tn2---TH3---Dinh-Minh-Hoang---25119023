@@ -1,0 +1,71 @@
+  0.00s  [may tinh]       khoi dong broker Mosquitto (cong 1883)
+  0.50s  [may tinh]       $ mosquitto_sub -h test.mosquitto.org -p 1883 -v -t bcse/th3/nhom-tuong -t bcse/th3/nhom-tuong/led
+  1.51s  [ESP32 Serial]   
+  1.51s  [ESP32 Serial]   Bai 5 - MQTT publish/subscribe
+  1.51s  [ESP32 Serial]           [mo phong] pinMode(2, OUTPUT)
+  1.51s  [ESP32 Serial]           [mo phong] digitalWrite(GPIO2, LOW)
+  1.51s  [ESP32 Serial]   Dang ket noi Wi-Fi: CMCC-C2eF
+  1.51s  [ESP32 Serial]           [mo phong] WiFi.begin("CMCC-C2eF") -> coi nhu da ket noi
+  1.51s  [ESP32 Serial]   
+  1.51s  [ESP32 Serial]   Da vao mang, IP: 127.0.0.1
+  1.51s  [ESP32 Serial]   [MQTT] Ket noi broker test.mosquitto.org:1883, client id = esp32-th3-112233
+  1.51s  [ESP32 Serial]   [MQTT] Da ket noi broker
+  1.51s  [ESP32 Serial]   [MQTT] Da subscribe: bcse/th3/nhom-tuong/led
+  3.01s  [ESP32 Serial]   [MQTT] Gui -> bcse/th3/nhom-tuong : 0
+  3.01s  [mosquitto_sub]  bcse/th3/nhom-tuong 0
+  5.00s  [ESP32 Serial]   [MQTT] Gui -> bcse/th3/nhom-tuong : 1
+  5.01s  [mosquitto_sub]  bcse/th3/nhom-tuong 1
+  7.01s  [ESP32 Serial]   [MQTT] Gui -> bcse/th3/nhom-tuong : 2
+  7.01s  [mosquitto_sub]  bcse/th3/nhom-tuong 2
+  7.50s  [may tinh]       $ mosquitto_pub -h test.mosquitto.org -p 1883 -t bcse/th3/nhom-tuong/led -m "1"
+  7.51s  [mosquitto_sub]  bcse/th3/nhom-tuong/led 1
+  7.51s  [ESP32 Serial]   [MQTT] Nhan <- bcse/th3/nhom-tuong/led : 1
+  7.51s  [ESP32 Serial]           [mo phong] digitalWrite(GPIO2, HIGH)
+  7.51s  [ESP32 Serial]   LED GPIO2: BAT
+  9.00s  [ESP32 Serial]   [MQTT] Gui -> bcse/th3/nhom-tuong : 3
+  9.01s  [mosquitto_sub]  bcse/th3/nhom-tuong 3
+ 10.51s  [may tinh]       $ mosquitto_pub -h test.mosquitto.org -p 1883 -t bcse/th3/nhom-tuong/led -m "0"
+ 10.51s  [mosquitto_sub]  bcse/th3/nhom-tuong/led 0
+ 10.51s  [ESP32 Serial]   [MQTT] Nhan <- bcse/th3/nhom-tuong/led : 0
+ 10.51s  [ESP32 Serial]           [mo phong] digitalWrite(GPIO2, LOW)
+ 10.51s  [ESP32 Serial]   LED GPIO2: TAT
+ 11.00s  [ESP32 Serial]   [MQTT] Gui -> bcse/th3/nhom-tuong : 4
+ 11.00s  [mosquitto_sub]  bcse/th3/nhom-tuong 4
+ 12.51s  [may tinh]       $ mosquitto_pub -h test.mosquitto.org -p 1883 -t bcse/th3/nhom-tuong/led -m "abc"
+ 12.52s  [mosquitto_sub]  bcse/th3/nhom-tuong/led abc
+ 12.52s  [ESP32 Serial]   [MQTT] Nhan <- bcse/th3/nhom-tuong/led : abc
+ 12.52s  [ESP32 Serial]   Lenh khong hop le, chi nhan '1' hoac '0'
+ 13.01s  [ESP32 Serial]   [MQTT] Gui -> bcse/th3/nhom-tuong : 5
+ 13.01s  [mosquitto_sub]  bcse/th3/nhom-tuong 5
+ 14.52s  [may tinh]       go phim '1' vao Serial Monitor cua ESP32
+ 14.52s  [ESP32 Serial]   [MQTT] Gui lenh -> bcse/th3/nhom-tuong/led : 1
+ 14.52s  [mosquitto_sub]  bcse/th3/nhom-tuong/led 1
+ 14.52s  [ESP32 Serial]   [MQTT] Nhan <- bcse/th3/nhom-tuong/led : 1
+ 14.52s  [ESP32 Serial]           [mo phong] digitalWrite(GPIO2, HIGH)
+ 14.52s  [ESP32 Serial]   LED GPIO2: BAT
+ 15.00s  [ESP32 Serial]   [MQTT] Gui -> bcse/th3/nhom-tuong : 6
+ 15.00s  [mosquitto_sub]  bcse/th3/nhom-tuong 6
+ 17.00s  [ESP32 Serial]   [MQTT] Gui -> bcse/th3/nhom-tuong : 7
+ 17.01s  [mosquitto_sub]  bcse/th3/nhom-tuong 7
+ 17.02s  [may tinh]       TAT broker de thu ket noi lai
+ 17.11s  [ESP32 Serial]   [MQTT] Ket noi broker test.mosquitto.org:1883, client id = esp32-th3-112233
+ 17.11s  [ESP32 Serial]   [MQTT] That bai, state = -2, thu lai sau 5 giay
+ 22.11s  [ESP32 Serial]   [MQTT] Ket noi broker test.mosquitto.org:1883, client id = esp32-th3-112233
+ 22.11s  [ESP32 Serial]   [MQTT] That bai, state = -2, thu lai sau 5 giay
+ 25.11s  [may tinh]       BAT lai broker (mosquitto_sub tu noi lai)
+ 27.11s  [ESP32 Serial]   [MQTT] Ket noi broker test.mosquitto.org:1883, client id = esp32-th3-112233
+ 27.11s  [ESP32 Serial]   [MQTT] Da ket noi broker
+ 27.11s  [ESP32 Serial]   [MQTT] Da subscribe: bcse/th3/nhom-tuong/led
+ 27.11s  [ESP32 Serial]   [MQTT] Gui -> bcse/th3/nhom-tuong : 8
+ 27.11s  [mosquitto_sub]  bcse/th3/nhom-tuong 8
+ 29.11s  [ESP32 Serial]   [MQTT] Gui -> bcse/th3/nhom-tuong : 9
+ 29.11s  [mosquitto_sub]  bcse/th3/nhom-tuong 9
+ 31.11s  [ESP32 Serial]   [MQTT] Gui -> bcse/th3/nhom-tuong : 10
+ 31.11s  [mosquitto_sub]  bcse/th3/nhom-tuong 10
+ 31.61s  [may tinh]       $ mosquitto_pub -h test.mosquitto.org -p 1883 -t bcse/th3/nhom-tuong/led -m "0"
+ 31.61s  [mosquitto_sub]  bcse/th3/nhom-tuong/led 0
+ 31.61s  [ESP32 Serial]   [MQTT] Nhan <- bcse/th3/nhom-tuong/led : 0
+ 31.61s  [ESP32 Serial]           [mo phong] digitalWrite(GPIO2, LOW)
+ 31.61s  [ESP32 Serial]   LED GPIO2: TAT
+ 33.11s  [ESP32 Serial]   [MQTT] Gui -> bcse/th3/nhom-tuong : 11
+ 33.11s  [mosquitto_sub]  bcse/th3/nhom-tuong 11

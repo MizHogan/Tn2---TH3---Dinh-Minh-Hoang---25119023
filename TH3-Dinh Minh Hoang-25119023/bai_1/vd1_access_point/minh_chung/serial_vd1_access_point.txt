@@ -1,0 +1,14 @@
+03:43:35 ets Jul 29 2019 12:21:46
+03:43:35 
+03:43:35 rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+03:43:35 configsip: 0, SPIWP:0xee
+03:43:35 clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+03:43:35 mode:DIO, clock div:1
+03:43:35 load:0x3fff0030,len:4876
+03:43:35 ho 0 tail 12 room 4
+03:43:35 load:0x40078000,len:16532
+03:43:35 load:0x40080400,len:3500
+03:43:35 entry 0x400805b4
+03:43:36 AP SSID: Kud0_75
+03:43:36 AP IP: 192.168.4.1
+03:43:36 So thiet bi dang ket noi: 0
